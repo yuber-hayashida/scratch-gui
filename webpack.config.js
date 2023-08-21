@@ -12,17 +12,33 @@ const autoprefixer = require('autoprefixer');
 const postcssVars = require('postcss-simple-vars');
 const postcssImport = require('postcss-import');
 
+if (process.env.WEBPACK_DEV_SERVER === 'true') {
+    const fs = require('fs');
+    [
+        '.env.development.local',
+        '.env.development',
+        '.env',
+    ].forEach(dotenvFile => {
+        if (fs.existsSync(dotenvFile)) {
+            require('dotenv').config({
+                path: dotenvFile,
+            })
+        }
+    });
+}
+
 const STATIC_PATH = process.env.STATIC_PATH || '/static';
 
 const base = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     devtool: 'cheap-module-source-map',
     devServer: {
-        contentBase: path.resolve(__dirname, 'build'),
+        publicPath: '/scratchapp/',
         host: '0.0.0.0',
         port: process.env.PORT || 8601
     },
     output: {
+        publicPath: '/scratchapp/',
         library: 'GUI',
         filename: '[name].js',
         chunkFilename: 'chunks/[name].js'
