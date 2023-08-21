@@ -25,7 +25,11 @@
     "test:lint": "eslint . --ext .js,.jsx",
     "test:unit": "jest test[\\\\/]unit",
     "test:smoke": "jest --runInBand test[\\\\/]smoke",
-    "watch": "webpack --colors --watch"
+    "watch": "webpack --colors --watch",
+    "build:development": "node jake build:development",
+    "build:production": "node jake build:production",
+    "default": "node jake default",
+    "scripts:update": "node jake scripts:update"
   },
   "config": {
     "commitizen": {
@@ -169,5 +173,11 @@
   },
   "volta": {
     "node": "16.20.1"
+  },
+  "scripts-info": {
+    "build:development": "jake: Build for development",
+    "build:production": "jake: Build for production",
+    "default": "jake: Display the tasks with descriptions if you run `jake` with no task specified",
+    "scripts:update": "jake: Update NPM-scripts in package.json"
   }
 }
