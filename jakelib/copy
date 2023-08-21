@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+const sh = require("shelljs");
+const path = require("path");
+["default.js", "path.js", "scripts.js"].forEach(file => {
+  sh.rm("-f", file);
+  sh.cp(path.join("..", "..", "..", "cdk", "jakelib", file), ".");
+  sh.chmod("0444", file);
+});

@@ -11,6 +11,7 @@
   },
   "main": "./dist/scratch-gui.js",
   "scripts": {
+    "info": "npm-scripts-info",
     "build": "npm run clean && webpack --colors --bail",
     "clean": "rimraf ./build && mkdirp build && rimraf ./dist && mkdirp dist",
     "deploy": "touch build/.nojekyll && gh-pages -t -d build -m \"[skip ci] Build for $(git log --pretty=format:%H -n1)\"",
@@ -104,6 +105,12 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
+    "npm-scripts-info": "^0.3.9",
+    "per-env": "^1.0.2",
+    "jake": "^10.8.7",
+    "@types/jake": "^0.0.33",
+    "@types/shelljs": "^0.8.12",
+    "shelljs": "^0.8.5",
     "@babel/cli": "7.14.8",
     "@babel/core": "7.14.8",
     "@babel/plugin-proposal-object-rest-spread": "7.14.7",
