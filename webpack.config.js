@@ -12,20 +12,20 @@ const autoprefixer = require('autoprefixer');
 const postcssVars = require('postcss-simple-vars');
 const postcssImport = require('postcss-import');
 
-if (process.env.WEBPACK_DEV_SERVER === 'true') {
-    const fs = require('fs');
-    [
-        '.env.development.local',
-        '.env.development',
-        '.env',
-    ].forEach(dotenvFile => {
-        if (fs.existsSync(dotenvFile)) {
-            require('dotenv').config({
-                path: dotenvFile,
-            })
-        }
-    });
-}
+const env = (process.env.WEBPACK_DEV_SERVER === 'true') ? 'development' : 'production';
+const fs = require('fs');
+[
+    `.env.${env}.local`,
+    `.env.${env}`,
+    `.env`
+].forEach(dotenvFile => {
+    if (fs.existsSync(dotenvFile)) {
+        // eslint-disable-next-line global-require
+        require('dotenv').config({
+            path: dotenvFile
+        });
+    }
+});
 
 const STATIC_PATH = process.env.STATIC_PATH || '/static';
 
@@ -143,7 +143,7 @@ module.exports = [
     defaultsDeep({}, base, {
         entry: {
             'lib.min': ['react', 'react-dom'],
-            'gui': './src/playground/index.jsx',
+            'gui': './src/playground/index-custom.jsx',
             'blocksonly': './src/playground/blocks-only.jsx',
             'compatibilitytesting': './src/playground/compatibility-testing.jsx',
             'player': './src/playground/player.jsx'
@@ -175,6 +175,8 @@ module.exports = [
         },
         plugins: base.plugins.concat([
             new webpack.DefinePlugin({
+                'process.env.PROJECT_HOST': `"${process.env.PROJECT_HOST}"`,
+                'process.env.ASSET_HOST': `"${process.env.ASSET_HOST}"`,
                 'process.env.NODE_ENV': `"${process.env.NODE_ENV}"`,
                 'process.env.DEBUG': Boolean(process.env.DEBUG),
                 'process.env.GA_ID': `"${process.env.GA_ID || 'UA-000000-01'}"`
