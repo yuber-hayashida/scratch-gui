@@ -28,8 +28,8 @@ class Storage extends ScratchStorage {
             this.getAssetCreateConfig.bind(this)
         );
         this.addWebStore(
-            [this.AssetType.Sound],
-            asset => `static/extension-assets/scratch3_music/${asset.assetId}.${asset.dataFormat}`
+            [this.AssetType.ImageVector, this.AssetType.ImageBitmap, this.AssetType.Sound],
+            asset => `https://assets.scratch.mit.edu/${asset.assetId}.${asset.dataFormat}`
         );
     }
     setProjectHost (projectHost) {

@@ -29,6 +29,9 @@ const fs = require('fs');
 
 const STATIC_PATH = process.env.STATIC_PATH || '/static';
 
+// node: --openssl-legacy-provider is not allowed in NODE_OPTIONS - Datainfinities https://www.datainfinities.com/69/node-openssl-legacy-provider-not-allowed-in-node-options
+process.env.NODE_OPTIONS = '--openssl-legacy-provider';
+
 const base = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     devtool: 'cheap-module-source-map',

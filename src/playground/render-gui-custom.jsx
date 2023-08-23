@@ -14,7 +14,7 @@ if (!assetHost || !assetHost.startsWith('http')) {
     assetHost = `${window.location.origin}/assets`;
 }
 let projectHost = process.env.PROJECT_HOST;
-if (!projectHost || !assetHost.startsWith('http')) {
+if (!projectHost || !projectHost.startsWith('http')) {
     projectHost = `${window.location.origin}/projects`;
 }
 // const assetHost = 'http://localhost:3000/assets';
