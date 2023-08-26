@@ -218,6 +218,9 @@ const ProjectSaverHOC = function (WrappedComponent) {
          */
         storeProject (projectId, requestParams) {
             requestParams = requestParams || {};
+            if (!requestParams.title) {
+                requestParams = {...requestParams, title: this.props.reduxProjectTitle};
+            }
             this.clearAutoSaveTimeout();
             // Serialize VM state now before embarking on
             // the asynchronous journey of storing assets to

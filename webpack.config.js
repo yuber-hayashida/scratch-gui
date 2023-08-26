@@ -36,12 +36,12 @@ const base = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     devtool: 'cheap-module-source-map',
     devServer: {
-        publicPath: '/scratchapp/',
+        publicPath: '/scratch_app/',
         host: '0.0.0.0',
         port: process.env.PORT || 8601
     },
     output: {
-        publicPath: '/scratchapp/',
+        publicPath: '/scratch_app/',
         library: 'GUI',
         filename: '[name].js',
         chunkFilename: 'chunks/[name].js'

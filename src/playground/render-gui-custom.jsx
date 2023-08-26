@@ -11,16 +11,20 @@ const onClickLogo = () => {
 
 let assetHost = process.env.ASSET_HOST;
 if (!assetHost || !assetHost.startsWith('http')) {
-    assetHost = `${window.location.origin}/assets`;
+    assetHost = `${window.location.origin}/scratch_api/assets`;
 }
 let projectHost = process.env.PROJECT_HOST;
 if (!projectHost || !projectHost.startsWith('http')) {
-    projectHost = `${window.location.origin}/projects`;
+    projectHost = `${window.location.origin}/scratch_api/projects`;
 }
 // const assetHost = 'http://localhost:3000/assets';
 // const projectHost = 'http://localhost:3000/projects';
 // eslint-disable-next-line no-console
 console.log('assetHost:', assetHost, ', projectHost:', projectHost);
+
+const searchParams = new URLSearchParams(window.location.search);
+const isPlayerOnly = searchParams.has('isPlayerOnly') && searchParams.get('isPlayerOnly') === 'true';
+const isFullScreen = searchParams.has('isFullScreen') && searchParams.get('isFullScreen') === 'true';
 
 /*
  * Render the GUI playground. This is a separate function because importing anything
@@ -63,7 +67,10 @@ export default appTarget => {
 
     ReactDOM.render(
         <WrappedGui
-            canEditTitle={false}
+            isPlayerOnly={isPlayerOnly}
+            isFullScreen={isFullScreen}
+            canShare={false}
+            canEditTitle
             canCreateNew={false}
             backpackVisible
             showComingSoon={false}

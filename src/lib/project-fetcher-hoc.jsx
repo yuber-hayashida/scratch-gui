@@ -22,6 +22,7 @@ import {
 
 import log from './log';
 import storage from './storage';
+import {setProjectTitle} from '../reducers/project-title';
 
 /* Higher Order Component to provide behavior for loading projects by id. If
  * there's no id, the default project is loaded.
@@ -76,6 +77,11 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                 .load(storage.AssetType.Project, projectId, storage.DataFormat.JSON)
                 .then(projectAsset => {
                     if (projectAsset) {
+                        const assetData = JSON.parse((new TextDecoder()).decode(projectAsset.data));
+                        if (assetData.title) {
+                            this.props.onSetProjectTitle(assetData.title);
+                            projectAsset.data = (new TextEncoder()).encode(assetData.body);
+                        }
                         this.props.onFetchedProjectData(projectAsset.data, loadingState);
                     } else {
                         // Treat failure to load as an error
@@ -91,6 +97,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
         render () {
             const {
                 /* eslint-disable no-unused-vars */
+                onSetProjectTitle,
                 assetHost,
                 intl,
                 isLoadingProject: isLoadingProjectProp,
@@ -116,6 +123,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
         }
     }
     ProjectFetcherComponent.propTypes = {
+        onSetProjectTitle: PropTypes.func,
         assetHost: PropTypes.string,
         canSave: PropTypes.bool,
         intl: intlShape.isRequired,
@@ -148,6 +156,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
         reduxProjectId: state.scratchGui.projectState.projectId
     });
     const mapDispatchToProps = dispatch => ({
+        onSetProjectTitle: title => dispatch(setProjectTitle(title)),
         onActivateTab: tab => dispatch(activateTab(tab)),
         onError: error => dispatch(projectError(error)),
         onFetchedProjectData: (projectData, loadingState) =>
