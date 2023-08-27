@@ -25,6 +25,7 @@ console.log('assetHost:', assetHost, ', projectHost:', projectHost);
 const searchParams = new URLSearchParams(window.location.search);
 const isPlayerOnly = searchParams.has('isPlayerOnly') && searchParams.get('isPlayerOnly') === 'true';
 const isFullScreen = searchParams.has('isFullScreen') && searchParams.get('isFullScreen') === 'true';
+const projectId = searchParams.has('projectId') ? searchParams.get('projectId') : 1;
 
 /*
  * Render the GUI playground. This is a separate function because importing anything
@@ -76,7 +77,7 @@ export default appTarget => {
             showComingSoon={false}
             backpackHost={backpackHost}
             canSave
-            projectId={1}
+            projectId={projectId}
             assetHost={assetHost}
             projectHost={projectHost}
             onClickLogo={onClickLogo}

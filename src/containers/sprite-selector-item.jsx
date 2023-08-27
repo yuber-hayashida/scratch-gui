@@ -115,6 +115,7 @@ class SpriteSelectorItem extends React.PureComponent {
     render () {
         const {
             /* eslint-disable no-unused-vars */
+            projectProtected,
             asset,
             id,
             index,
@@ -129,15 +130,17 @@ class SpriteSelectorItem extends React.PureComponent {
             /* eslint-enable no-unused-vars */
             ...props
         } = this.props;
+        const onDeleteButtonClickFunc = !projectProtected && onDeleteButtonClick ? this.handleDelete : null;
+        const onExportButtonClickFunc = !projectProtected && onExportButtonClick ? this.handleExport : null;
         return (
             <SpriteSelectorItemComponent
                 componentRef={this.setRef}
                 costumeURL={this.getCostumeData()}
                 preventContextMenu={this.dragRecognizer.gestureInProgress()}
                 onClick={this.handleClick}
-                onDeleteButtonClick={onDeleteButtonClick ? this.handleDelete : null}
+                onDeleteButtonClick={onDeleteButtonClickFunc}
                 onDuplicateButtonClick={onDuplicateButtonClick ? this.handleDuplicate : null}
-                onExportButtonClick={onExportButtonClick ? this.handleExport : null}
+                onExportButtonClick={onExportButtonClickFunc}
                 onMouseDown={this.handleMouseDown}
                 onMouseEnter={this.handleMouseEnter}
                 onMouseLeave={this.handleMouseLeave}
@@ -148,6 +151,7 @@ class SpriteSelectorItem extends React.PureComponent {
 }
 
 SpriteSelectorItem.propTypes = {
+    projectProtected: PropTypes.bool,
     asset: PropTypes.instanceOf(storage.Asset),
     costumeURL: PropTypes.string,
     dispatchSetHoveredSprite: PropTypes.func.isRequired,
@@ -168,6 +172,7 @@ SpriteSelectorItem.propTypes = {
 };
 
 const mapStateToProps = (state, {id}) => ({
+    projectProtected: state.scratchGui.projectProtected,
     dragging: state.scratchGui.assetDrag.dragging,
     receivedBlocks: state.scratchGui.hoveredTarget.receivedBlocks &&
             state.scratchGui.hoveredTarget.sprite === id,

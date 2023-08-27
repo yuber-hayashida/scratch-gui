@@ -499,6 +499,7 @@ class MenuBar extends React.Component {
                                         >
                                             {this.props.intl.formatMessage(sharedMessages.loadFromComputerTitle)}
                                         </MenuItem>
+                                        {this.props.projectProtected ||
                                         <SB3Downloader>{(className, downloadProjectCallback) => (
                                             <MenuItem
                                                 className={className}
@@ -510,7 +511,7 @@ class MenuBar extends React.Component {
                                                     id="gui.menuBar.downloadToComputer"
                                                 />
                                             </MenuItem>
-                                        )}</SB3Downloader>
+                                        )}</SB3Downloader>}
                                     </MenuSection>
                                 </MenuBarMenu>
                             </div>
@@ -841,6 +842,7 @@ class MenuBar extends React.Component {
 }
 
 MenuBar.propTypes = {
+    projectProtected: PropTypes.bool,
     aboutMenuOpen: PropTypes.bool,
     accountMenuOpen: PropTypes.bool,
     authorId: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
@@ -934,6 +936,7 @@ const mapStateToProps = (state, ownProps) => {
     const loadingState = state.scratchGui.projectState.loadingState;
     const user = state.session && state.session.session && state.session.session.user;
     return {
+        projectProtected: state.scratchGui.projectProtected,
         aboutMenuOpen: aboutMenuOpen(state),
         accountMenuOpen: accountMenuOpen(state),
         currentLocale: state.locales.locale,

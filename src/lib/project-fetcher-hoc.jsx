@@ -23,6 +23,7 @@ import {
 import log from './log';
 import storage from './storage';
 import {setProjectTitle} from '../reducers/project-title';
+import {setProjectProtected} from '../reducers/project-protected';
 
 /* Higher Order Component to provide behavior for loading projects by id. If
  * there's no id, the default project is loaded.
@@ -78,8 +79,11 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                 .then(projectAsset => {
                     if (projectAsset) {
                         const assetData = JSON.parse((new TextDecoder()).decode(projectAsset.data));
-                        if (assetData.title) {
+                        if (assetData.hasOwnProperty('title')) {
                             this.props.onSetProjectTitle(assetData.title);
+                            if (assetData.hasOwnProperty('protected')) {
+                                this.props.onSetProjectProtected(assetData.protected);
+                            }
                             projectAsset.data = (new TextEncoder()).encode(assetData.body);
                         }
                         this.props.onFetchedProjectData(projectAsset.data, loadingState);
@@ -98,6 +102,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
             const {
                 /* eslint-disable no-unused-vars */
                 onSetProjectTitle,
+                onSetProjectProtected,
                 assetHost,
                 intl,
                 isLoadingProject: isLoadingProjectProp,
@@ -124,6 +129,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
     }
     ProjectFetcherComponent.propTypes = {
         onSetProjectTitle: PropTypes.func,
+        onSetProjectProtected: PropTypes.func,
         assetHost: PropTypes.string,
         canSave: PropTypes.bool,
         intl: intlShape.isRequired,
@@ -157,6 +163,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
     });
     const mapDispatchToProps = dispatch => ({
         onSetProjectTitle: title => dispatch(setProjectTitle(title)),
+        onSetProjectProtected: protected1 => dispatch(setProjectProtected(protected1)),
         onActivateTab: tab => dispatch(activateTab(tab)),
         onError: error => dispatch(projectError(error)),
         onFetchedProjectData: (projectData, loadingState) =>
