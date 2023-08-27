@@ -5,10 +5,6 @@ import {compose} from 'redux';
 import AppStateHOC from '../lib/app-state-hoc.jsx';
 import GUI from '../containers/gui.jsx';
 
-const onClickLogo = () => {
-    window.location = 'https://scratch.mit.edu';
-};
-
 let assetHost = process.env.ASSET_HOST;
 if (!assetHost || !assetHost.startsWith('http')) {
     assetHost = `${window.location.origin}/scratch_api/assets`;
@@ -26,6 +22,13 @@ const searchParams = new URLSearchParams(window.location.search);
 const isPlayerOnly = searchParams.has('isPlayerOnly') && searchParams.get('isPlayerOnly') === 'true';
 const isFullScreen = searchParams.has('isFullScreen') && searchParams.get('isFullScreen') === 'true';
 const projectId = searchParams.has('projectId') ? searchParams.get('projectId') : 1;
+const logo = searchParams.has('logo') ? searchParams.get('logo') : null;
+const url = searchParams.has('url') ? searchParams.get('url') : 'https://scratch.mit.edu';
+
+const onClickLogo = () => {
+    // window.location = url;
+    window.open(url, '_blank');
+};
 
 /*
  * Render the GUI playground. This is a separate function because importing anything
@@ -81,6 +84,8 @@ export default appTarget => {
             assetHost={assetHost}
             projectHost={projectHost}
             onClickLogo={onClickLogo}
+            logo={logo}
+            canChangeTheme
         />,
         appTarget);
 };
