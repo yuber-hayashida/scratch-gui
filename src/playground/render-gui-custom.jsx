@@ -21,7 +21,7 @@ console.log('assetHost:', assetHost, ', projectHost:', projectHost);
 const searchParams = new URLSearchParams(window.location.search);
 const isPlayerOnly = searchParams.has('isPlayerOnly') && searchParams.get('isPlayerOnly') === 'true';
 const isFullScreen = searchParams.has('isFullScreen') && searchParams.get('isFullScreen') === 'true';
-const projectId = searchParams.has('projectId') ? searchParams.get('projectId') : 1;
+const projectId = searchParams.has('projectId') ? searchParams.get('projectId') : 100;
 const logo = searchParams.has('logo') ? searchParams.get('logo') : null;
 const url = searchParams.has('url') ? searchParams.get('url') : 'https://scratch.mit.edu';
 
