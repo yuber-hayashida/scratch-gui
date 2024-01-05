@@ -78,13 +78,16 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                 .load(storage.AssetType.Project, projectId, storage.DataFormat.JSON)
                 .then(projectAsset => {
                     if (projectAsset) {
-                        const assetData = JSON.parse((new TextDecoder()).decode(projectAsset.data));
-                        if (assetData.hasOwnProperty('title')) {
-                            this.props.onSetProjectTitle(assetData.title);
-                            if (assetData.hasOwnProperty('protected')) {
-                                this.props.onSetProjectProtected(assetData.protected);
+                        if (projectAsset.data instanceof ArrayBuffer ||
+                            ArrayBuffer.isView(projectAsset.data)) {
+                            const assetData = JSON.parse((new TextDecoder()).decode(projectAsset.data));
+                            if (assetData.hasOwnProperty('title')) {
+                                this.props.onSetProjectTitle(assetData.title);
+                                if (assetData.hasOwnProperty('protected')) {
+                                    this.props.onSetProjectProtected(assetData.protected);
+                                }
+                                projectAsset.data = (new TextEncoder()).encode(assetData.body);
                             }
-                            projectAsset.data = (new TextEncoder()).encode(assetData.body);
                         }
                         this.props.onFetchedProjectData(projectAsset.data, loadingState);
                     } else {
