@@ -29,7 +29,8 @@ class Storage extends ScratchStorage {
         );
         this.addWebStore(
             [this.AssetType.ImageVector, this.AssetType.ImageBitmap, this.AssetType.Sound],
-            asset => `https://assets.scratch.mit.edu/${asset.assetId}.${asset.dataFormat}`
+            // asset => `https://assets.scratch.mit.edu/${asset.assetId}.${asset.dataFormat}`
+            asset => `https://yubersvc-static-asset.s3.ap-northeast-1.amazonaws.com/${asset.assetId}.${asset.dataFormat}`
         );
     }
     setProjectHost (projectHost) {
