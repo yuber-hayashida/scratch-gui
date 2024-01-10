@@ -12,12 +12,14 @@ class Storage extends ScratchStorage {
         this.cacheDefaultProject();
     }
     addOfficialScratchWebStores () {
+        // Projects
         this.addWebStore(
             [this.AssetType.Project],
             this.getProjectGetConfig.bind(this),
             this.getProjectCreateConfig.bind(this),
             this.getProjectUpdateConfig.bind(this)
         );
+        // Dynamic assets
         this.addWebStore(
             [this.AssetType.ImageVector, this.AssetType.ImageBitmap, this.AssetType.Sound],
             this.getAssetGetConfig.bind(this),
@@ -27,10 +29,11 @@ class Storage extends ScratchStorage {
             this.getAssetCreateConfig.bind(this),
             this.getAssetCreateConfig.bind(this)
         );
+        // Static assets
         this.addWebStore(
             [this.AssetType.ImageVector, this.AssetType.ImageBitmap, this.AssetType.Sound],
             // asset => `https://assets.scratch.mit.edu/${asset.assetId}.${asset.dataFormat}`
-            asset => `https://yubersvc-static-asset.s3.ap-northeast-1.amazonaws.com/${asset.assetId}.${asset.dataFormat}`
+            asset => `http://yubersvc-static-asset.s3-website-ap-northeast-1.amazonaws.com/${asset.assetId}.${asset.dataFormat}`
         );
     }
     setProjectHost (projectHost) {

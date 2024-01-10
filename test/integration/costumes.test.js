@@ -210,7 +210,7 @@ describe('Working with costumes', () => {
             .mouseMove(abbyElement)
             .perform();
         // wait for one of Abby's alternate costumes to appear
-        await findByXpath('//img[@src="https://yubersvc-static-asset.s3.ap-northeast-1.amazonaws.com/45de34b47a2ce22f6f5d28bb35a44ff5.svg"]');
+        await findByXpath('//img[@src="http://yubersvc-static-asset.s3-website-ap-northeast-1.amazonaws.com/45de34b47a2ce22f6f5d28bb35a44ff5.svg"]');
         const logs = await getLogs();
         await expect(logs).toEqual([]);
     });

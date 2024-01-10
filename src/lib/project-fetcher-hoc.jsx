@@ -153,7 +153,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
     };
     ProjectFetcherComponent.defaultProps = {
         // assetHost: 'https://assets.scratch.mit.edu',
-        assetHost: 'https://yubersvc-static-asset.s3.ap-northeast-1.amazonaws.com',
+        assetHost: 'http://yubersvc-static-asset.s3-website-ap-northeast-1.amazonaws.com',
         projectHost: 'https://projects.scratch.mit.edu'
     };
 

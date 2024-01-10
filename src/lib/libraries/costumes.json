@@ -1,5 +1,320 @@
 [
     {
+        "assetId": "27eb610e63b723a5e3ab7a41850cdbfa",
+        "name": "あおうさあるく1",
+        "bitmapResolution": 1,
+        "md5ext": "27eb610e63b723a5e3ab7a41850cdbfa.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.25,
+        "rotationCenterY": 61.09055555555557
+      },
+      {
+        "assetId": "5f96ebb465e7c38ec4b0e42e645b7c67",
+        "name": "あおうさあるく2",
+        "bitmapResolution": 1,
+        "md5ext": "5f96ebb465e7c38ec4b0e42e645b7c67.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.53390999999999,
+        "rotationCenterY": 64.699215
+      },
+      {
+        "assetId": "3ba612f9e934b02efbe613ef8156297f",
+        "name": "あおうさあるく3",
+        "bitmapResolution": 1,
+        "md5ext": "3ba612f9e934b02efbe613ef8156297f.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.411855,
+        "rotationCenterY": 61.289820000000006
+      },
+      {
+        "assetId": "3e675bd0918b1344ded1257b8e757a4d",
+        "name": "あおうさあるく4",
+        "bitmapResolution": 1,
+        "md5ext": "3e675bd0918b1344ded1257b8e757a4d.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.391275000000036,
+        "rotationCenterY": 64.605745
+      },
+      {
+        "assetId": "3b01b11ae37986fb880c929d90d07a83",
+        "name": "あかうさあるく1",
+        "bitmapResolution": 1,
+        "md5ext": "3b01b11ae37986fb880c929d90d07a83.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.46625,
+        "rotationCenterY": 61.32885
+      },
+      {
+        "assetId": "ed09708288b296d334dadccbe2405064",
+        "name": "あかうさあるく2",
+        "bitmapResolution": 1,
+        "md5ext": "ed09708288b296d334dadccbe2405064.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.57046824293005,
+        "rotationCenterY": 64.76395730706079
+      },
+      {
+        "assetId": "c3d81b03b29db2cebf77e3d41bd238fe",
+        "name": "あかうさあるく3",
+        "bitmapResolution": 1,
+        "md5ext": "c3d81b03b29db2cebf77e3d41bd238fe.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.43664717348926,
+        "rotationCenterY": 61.32742054693276
+      },
+      {
+        "assetId": "1c056fc9d4a617a6241796075b7cadd8",
+        "name": "あかうさあるく4",
+        "bitmapResolution": 1,
+        "md5ext": "1c056fc9d4a617a6241796075b7cadd8.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.37865090403338,
+        "rotationCenterY": 64.58333333333329
+      },
+      {
+        "assetId": "9b6c3390f330e1b69d5c1f7adc07dc2e",
+        "name": "うさぎあるく1",
+        "bitmapResolution": 1,
+        "md5ext": "9b6c3390f330e1b69d5c1f7adc07dc2e.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.129558755327906,
+        "rotationCenterY": 65.13632263365746
+      },
+      {
+        "assetId": "aad7c957c3563244afe4324d2a9549ed",
+        "name": "うさぎあるく2",
+        "bitmapResolution": 1,
+        "md5ext": "aad7c957c3563244afe4324d2a9549ed.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.43816149605661,
+        "rotationCenterY": 60.133906949011404
+      },
+      {
+        "assetId": "46a63a0bbe78502e22f83767bd59d0ee",
+        "name": "うさぎせいかい",
+        "bitmapResolution": 1,
+        "md5ext": "46a63a0bbe78502e22f83767bd59d0ee.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 41.136514543962875,
+        "rotationCenterY": 58.34584910105443
+      },
+      {
+        "assetId": "ead04a071c0a83d05f77567c0729eca3",
+        "name": "うさぎまちがい",
+        "bitmapResolution": 1,
+        "md5ext": "ead04a071c0a83d05f77567c0729eca3.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 41.28886707950883,
+        "rotationCenterY": 58.34406671325458
+      },  
+      {
+        "assetId": "ad7d9bbded0f1c9c5811ccfdc5a9d470",
+        "name": "おばけ",
+        "bitmapResolution": 1,
+        "md5ext": "ad7d9bbded0f1c9c5811ccfdc5a9d470.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 68.5,
+        "rotationCenterY": 59.5
+      },
+      {
+        "assetId": "32aacc42b8bab5cb958bea11d01d876d",
+        "name": "かいじゅうあるく1",
+        "bitmapResolution": 1,
+        "md5ext": "32aacc42b8bab5cb958bea11d01d876d.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 68,
+        "rotationCenterY": 60
+      },
+      {
+        "assetId": "8950981c28f1d350fd0b3410ad5328a6",
+        "name": "かいじゅうあるく2",
+        "bitmapResolution": 1,
+        "md5ext": "8950981c28f1d350fd0b3410ad5328a6.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 92.4141475211608,
+        "rotationCenterY": 60.28657799274484
+      },
+      {
+        "assetId": "5d5b94c824c4a27372fbb86a23d1429a",
+        "name": "かいじゅうこうせん",
+        "bitmapResolution": 1,
+        "md5ext": "5d5b94c824c4a27372fbb86a23d1429a.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 93.20979443772677,
+        "rotationCenterY": 60.573155985489734
+      },  
+      {
+        "assetId": "cd6681394077332e7245321846981650",
+        "name": "きうさあるく1",
+        "bitmapResolution": 1,
+        "md5ext": "cd6681394077332e7245321846981650.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.35923753665682,
+        "rotationCenterY": 61.166666666666615
+      },
+      {
+        "assetId": "d11b4f49f0ea82bb7fe0ac2ca6609903",
+        "name": "きうさあるく2",
+        "bitmapResolution": 1,
+        "md5ext": "d11b4f49f0ea82bb7fe0ac2ca6609903.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.643022716736255,
+        "rotationCenterY": 64.89244663382597
+      },
+      {
+        "assetId": "62bf485f5d9683bcc1d226f2e6ece21a",
+        "name": "きうさあるく3",
+        "bitmapResolution": 1,
+        "md5ext": "62bf485f5d9683bcc1d226f2e6ece21a.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.3416179337232,
+        "rotationCenterY": 61.18329637841836
+      },
+      {
+        "assetId": "298183d68d1a03b18a63e702162ef7e4",
+        "name": "きうさあるく4",
+        "bitmapResolution": 1,
+        "md5ext": "298183d68d1a03b18a63e702162ef7e4.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.37865090403338,
+        "rotationCenterY": 64.58333333333337
+      },
+      {
+        "assetId": "03fd13f29ef5971697d77eec62940ce3",
+        "name": "くろうさあるく1",
+        "bitmapResolution": 1,
+        "md5ext": "03fd13f29ef5971697d77eec62940ce3.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.573802541544495,
+        "rotationCenterY": 61.491851851851834
+      },
+      {
+        "assetId": "2d3675d8177275b2934524c543d31f4a",
+        "name": "くろうさあるく2",
+        "bitmapResolution": 1,
+        "md5ext": "2d3675d8177275b2934524c543d31f4a.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.59517177344475,
+        "rotationCenterY": 64.7175697865353
+      },
+      {
+        "assetId": "0e5e652475dd1ddb4d0454dd583b7076",
+        "name": "くろうさあるく3",
+        "bitmapResolution": 1,
+        "md5ext": "0e5e652475dd1ddb4d0454dd583b7076.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.36066373840893,
+        "rotationCenterY": 61.258518518518514
+      },
+      {
+        "assetId": "ed74cad4f628bd0a028cf63e4e4effdd",
+        "name": "くろうさあるく4",
+        "bitmapResolution": 1,
+        "md5ext": "ed74cad4f628bd0a028cf63e4e4effdd.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.49767873723306,
+        "rotationCenterY": 64.70452674897113
+      },
+      {
+        "assetId": "fb342a099f6b6e7a429296d40d15e773",
+        "name": "しろうさあるく1",
+        "bitmapResolution": 1,
+        "md5ext": "fb342a099f6b6e7a429296d40d15e773.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.47947214076254,
+        "rotationCenterY": 61.348888888888894
+      },
+      {
+        "assetId": "e1423c9c87df07a6167d72849f3b68d1",
+        "name": "しろうさあるく2",
+        "bitmapResolution": 1,
+        "md5ext": "e1423c9c87df07a6167d72849f3b68d1.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.718198700092756,
+        "rotationCenterY": 64.93513957307051
+      },
+      {
+        "assetId": "d00e073c38d575b44e7ad79f30cbc383",
+        "name": "しろうさあるく3",
+        "bitmapResolution": 1,
+        "md5ext": "d00e073c38d575b44e7ad79f30cbc383.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.464860907759856,
+        "rotationCenterY": 61.416666666666686
+      },
+      {
+        "assetId": "2182eb7d336b9a2a33dfccea69365768",
+        "name": "しろうさあるく4",
+        "bitmapResolution": 1,
+        "md5ext": "2182eb7d336b9a2a33dfccea69365768.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.43802228412255,
+        "rotationCenterY": 64.59876543209873
+      },
+      {
+        "assetId": "29db7339ffec8414d021e5a22984b465",
+        "name": "ばくだん",
+        "bitmapResolution": 1,
+        "md5ext": "29db7339ffec8414d021e5a22984b465.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 30,
+        "rotationCenterY": 41
+      },
+      {
+        "assetId": "6ca3b674f6958d513e5a2b0eb5d52c6a",
+        "name": "ぴんくうさあるく1",
+        "bitmapResolution": 1,
+        "md5ext": "6ca3b674f6958d513e5a2b0eb5d52c6a.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.46041055718476,
+        "rotationCenterY": 61.32000000000002
+      },
+      {
+        "assetId": "3f3ec02c916e31050c28b6c4d2590095",
+        "name": "ぴんくうさあるく2",
+        "bitmapResolution": 1,
+        "md5ext": "3f3ec02c916e31050c28b6c4d2590095.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.660631383472634,
+        "rotationCenterY": 64.83333333333344
+      },
+      {
+        "assetId": "dd0e2c189c32135b16b8db022770dc82",
+        "name": "ぴんくうさあるく3",
+        "bitmapResolution": 1,
+        "md5ext": "dd0e2c189c32135b16b8db022770dc82.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 40.36285993167397,
+        "rotationCenterY": 61.26185185185183
+      },
+      {
+        "assetId": "14d7f7ec2534d867862c22ea39b145a8",
+        "name": "ぴんくうさあるく4",
+        "bitmapResolution": 1,
+        "md5ext": "14d7f7ec2534d867862c22ea39b145a8.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 36.412256267409504,
+        "rotationCenterY": 64.55308641975313
+      },
+      {
+        "assetId": "b3e99b7183a69bb05b1ab0e74b166a93",
+        "name": "ビーム",
+        "bitmapResolution": 1,
+        "md5ext": "b3e99b7183a69bb05b1ab0e74b166a93.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 35.00991439819336,
+        "rotationCenterY": 25.181684494018555
+      },
+      {
+        "assetId": "2d7575416dffd46530bb102400f49407",
+        "name": "ロボット",
+        "bitmapResolution": 1,
+        "md5ext": "2d7575416dffd46530bb102400f49407.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 55.64067255858623,
+        "rotationCenterY": 79.7501321390955
+      },
+      {
         "name": "Abby-a",
         "tags": [
             "people",
@@ -1661,72 +1976,6 @@
         "md5ext": "7499cf6ec438d0c7af6f896bc6adc294.svg",
         "rotationCenterX": 87,
         "rotationCenterY": 39
-    },
-    {
-        "name": "Cat Flying-a",
-        "tags": [
-            "animals",
-            "cat",
-            "kitty",
-            "kitten"
-        ],
-        "assetId": "a1ab94c8172c3b97ed9a2bf7c32172cd",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "a1ab94c8172c3b97ed9a2bf7c32172cd.svg",
-        "rotationCenterX": 55,
-        "rotationCenterY": 37
-    },
-    {
-        "name": "Cat Flying-b",
-        "tags": [
-            "animals",
-            "cat",
-            "kitty",
-            "kitten"
-        ],
-        "assetId": "6667936a2793aade66c765c329379ad0",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "6667936a2793aade66c765c329379ad0.svg",
-        "rotationCenterX": 44,
-        "rotationCenterY": 46
-    },
-    {
-        "name": "Cat-a",
-        "tags": [
-            "animals",
-            "cat",
-            "kitten",
-            "kitty",
-            "mammal",
-            "orange",
-            "scratch cat"
-        ],
-        "assetId": "bcf454acf82e4504149f7ffe07081dbc",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "bcf454acf82e4504149f7ffe07081dbc.svg",
-        "rotationCenterX": 48,
-        "rotationCenterY": 50
-    },
-    {
-        "name": "Cat-b",
-        "tags": [
-            "animals",
-            "cat",
-            "kitten",
-            "kitty",
-            "mammal",
-            "orange",
-            "scratch cat"
-        ],
-        "assetId": "0fb9be3e8397c983338cb71dc84d0b25",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "0fb9be3e8397c983338cb71dc84d0b25.svg",
-        "rotationCenterX": 46,
-        "rotationCenterY": 53
     },
     {
         "name": "Catcher-a",
@@ -4623,101 +4872,6 @@
         "rotationCenterY": 26
     },
     {
-        "name": "Giga Walk1",
-        "tags": [
-            "fantasy",
-            "walking"
-        ],
-        "assetId": "3afad833094d8dff1c4ff79edcaa13d0",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "3afad833094d8dff1c4ff79edcaa13d0.svg",
-        "rotationCenterX": 70,
-        "rotationCenterY": 107
-    },
-    {
-        "name": "Giga Walk2",
-        "tags": [
-            "fantasy",
-            "walking"
-        ],
-        "assetId": "d27716e022fb5f747d7b09fe6eeeca06",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "d27716e022fb5f747d7b09fe6eeeca06.svg",
-        "rotationCenterX": 71,
-        "rotationCenterY": 107
-    },
-    {
-        "name": "Giga Walk3",
-        "tags": [
-            "fantasy",
-            "walking"
-        ],
-        "assetId": "db55131bf54f96e8986d9b30730e42ce",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "db55131bf54f96e8986d9b30730e42ce.svg",
-        "rotationCenterX": 71,
-        "rotationCenterY": 107
-    },
-    {
-        "name": "Giga-a",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "happy"
-        ],
-        "assetId": "92161a11e851ecda94cbbb985018fed6",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "92161a11e851ecda94cbbb985018fed6.svg",
-        "rotationCenterX": 72,
-        "rotationCenterY": 96
-    },
-    {
-        "name": "Giga-b",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "happy"
-        ],
-        "assetId": "bc706a7648342aaacac9050378b40c43",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "bc706a7648342aaacac9050378b40c43.svg",
-        "rotationCenterX": 72,
-        "rotationCenterY": 96
-    },
-    {
-        "name": "Giga-c",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "happy"
-        ],
-        "assetId": "337b338b2b10176221e638ac537854e6",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "337b338b2b10176221e638ac537854e6.svg",
-        "rotationCenterX": 73,
-        "rotationCenterY": 96
-    },
-    {
-        "name": "Giga-d",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "mad"
-        ],
-        "assetId": "db15886cfdcb5e2f4459e9074e3990a1",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "db15886cfdcb5e2f4459e9074e3990a1.svg",
-        "rotationCenterX": 73,
-        "rotationCenterY": 96
-    },
-    {
         "name": "Giraffe-a",
         "tags": [
             "animals",
@@ -4970,51 +5124,6 @@
         "md5ext": "afb9fe328adae617ee3375366fca02e7.svg",
         "rotationCenterX": 40,
         "rotationCenterY": 80
-    },
-    {
-        "name": "Gobo-a",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "jenkins",
-            "ganglia"
-        ],
-        "assetId": "f505a4e9eab5e40e2669a4462dba4c90",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "f505a4e9eab5e40e2669a4462dba4c90.svg",
-        "rotationCenterX": 47,
-        "rotationCenterY": 55
-    },
-    {
-        "name": "Gobo-b",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "jenkins",
-            "ganglia"
-        ],
-        "assetId": "5c0896569305ab177d87caa31aad2a72",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "5c0896569305ab177d87caa31aad2a72.svg",
-        "rotationCenterX": 47,
-        "rotationCenterY": 55
-    },
-    {
-        "name": "Gobo-c",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "jenkins",
-            "ganglia"
-        ],
-        "assetId": "9d8021c216fb92cc708e1e96f3ed2b52",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "9d8021c216fb92cc708e1e96f3ed2b52.svg",
-        "rotationCenterX": 47,
-        "rotationCenterY": 55
     },
     {
         "name": "Grasshopper-a",
@@ -7421,61 +7530,6 @@
         "rotationCenterY": 48
     },
     {
-        "name": "Nano-a",
-        "tags": [
-            "fantasy",
-            "drawing"
-        ],
-        "assetId": "a62e560863c0e49b12e5d57e13d084f1",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "a62e560863c0e49b12e5d57e13d084f1.svg",
-        "rotationCenterX": 61,
-        "rotationCenterY": 60
-    },
-    {
-        "name": "Nano-b",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "happy"
-        ],
-        "assetId": "d12aead3e3c2917e7eba8b2b90a7afd2",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "d12aead3e3c2917e7eba8b2b90a7afd2.svg",
-        "rotationCenterX": 61,
-        "rotationCenterY": 60
-    },
-    {
-        "name": "Nano-c",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "happy"
-        ],
-        "assetId": "8f2f4a70e87262ef478ce60567b6208a",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "8f2f4a70e87262ef478ce60567b6208a.svg",
-        "rotationCenterX": 61,
-        "rotationCenterY": 60
-    },
-    {
-        "name": "Nano-d",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "angry"
-        ],
-        "assetId": "a4e2034751fa650fd5fd69432c110104",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "a4e2034751fa650fd5fd69432c110104.svg",
-        "rotationCenterX": 61,
-        "rotationCenterY": 60
-    },
-    {
         "name": "Neigh Pony",
         "tags": [
             "animals",
@@ -8070,113 +8124,6 @@
         "md5ext": "780467f3d173dcb37fd65834841babc6.svg",
         "rotationCenterX": 48,
         "rotationCenterY": 61
-    },
-    {
-        "name": "Pico Walk1",
-        "tags": [
-            "fantasy",
-            "walking"
-        ],
-        "assetId": "c8f58f31cabf4acabb3f828730061276",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "c8f58f31cabf4acabb3f828730061276.svg",
-        "rotationCenterX": 54,
-        "rotationCenterY": 71
-    },
-    {
-        "name": "Pico Walk2",
-        "tags": [
-            "fantasy",
-            "walking"
-        ],
-        "assetId": "52a60eccb624530fd3a24fc41fbad6e5",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "52a60eccb624530fd3a24fc41fbad6e5.svg",
-        "rotationCenterX": 54,
-        "rotationCenterY": 71
-    },
-    {
-        "name": "Pico Walk3",
-        "tags": [
-            "fantasy",
-            "walking"
-        ],
-        "assetId": "702bd644d01ea8eda2ea122daeea7d74",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "702bd644d01ea8eda2ea122daeea7d74.svg",
-        "rotationCenterX": 54,
-        "rotationCenterY": 70
-    },
-    {
-        "name": "Pico Walk4",
-        "tags": [
-            "fantasy",
-            "walking"
-        ],
-        "assetId": "22fb16ae7cc18187a7adaf2852f07884",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "22fb16ae7cc18187a7adaf2852f07884.svg",
-        "rotationCenterX": 54,
-        "rotationCenterY": 70
-    },
-    {
-        "name": "Pico-a",
-        "tags": [
-            "fantasy",
-            "drawing"
-        ],
-        "assetId": "e7ce31db37f7abd2901499db2e9ad83a",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "e7ce31db37f7abd2901499db2e9ad83a.svg",
-        "rotationCenterX": 55,
-        "rotationCenterY": 66
-    },
-    {
-        "name": "Pico-b",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "happy"
-        ],
-        "assetId": "a7597b1f0c13455d335a3d4fe77da528",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "a7597b1f0c13455d335a3d4fe77da528.svg",
-        "rotationCenterX": 55,
-        "rotationCenterY": 66
-    },
-    {
-        "name": "Pico-c",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "happy"
-        ],
-        "assetId": "bcc0e8a5dda3a813608902b887c87bb4",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "bcc0e8a5dda3a813608902b887c87bb4.svg",
-        "rotationCenterX": 55,
-        "rotationCenterY": 66
-    },
-    {
-        "name": "Pico-d",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "angry"
-        ],
-        "assetId": "d6dfa2efe58939af4c85755feb3c0375",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "d6dfa2efe58939af4c85755feb3c0375.svg",
-        "rotationCenterX": 55,
-        "rotationCenterY": 66
     },
     {
         "name": "Pitcher-a",
@@ -10257,61 +10204,6 @@
         "md5ext": "34fa36004be0340ec845ba6bbeb5e5d5.png",
         "rotationCenterX": 30,
         "rotationCenterY": 30
-    },
-    {
-        "name": "Tera-a",
-        "tags": [
-            "fantasy",
-            "drawing"
-        ],
-        "assetId": "18f9a11ecdbd3ad8719beb176c484d41",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "18f9a11ecdbd3ad8719beb176c484d41.svg",
-        "rotationCenterX": 49,
-        "rotationCenterY": 63
-    },
-    {
-        "name": "Tera-b",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "happy"
-        ],
-        "assetId": "365d4de6c99d71f1370f7c5e636728af",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "365d4de6c99d71f1370f7c5e636728af.svg",
-        "rotationCenterX": 49,
-        "rotationCenterY": 64
-    },
-    {
-        "name": "Tera-c",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "happy"
-        ],
-        "assetId": "2daca5f43efc2d29fb089879448142e9",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "2daca5f43efc2d29fb089879448142e9.svg",
-        "rotationCenterX": 49,
-        "rotationCenterY": 63
-    },
-    {
-        "name": "Tera-d",
-        "tags": [
-            "fantasy",
-            "drawing",
-            "angry"
-        ],
-        "assetId": "5456a723f3b35eaa946b974a59888793",
-        "bitmapResolution": 1,
-        "dataFormat": "svg",
-        "md5ext": "5456a723f3b35eaa946b974a59888793.svg",
-        "rotationCenterX": 49,
-        "rotationCenterY": 63
     },
     {
         "name": "Toucan-a",
