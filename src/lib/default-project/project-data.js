@@ -71,42 +71,32 @@ const projectData = translateFunction => {
                 lists: {},
                 broadcasts: {},
                 blocks: {},
-                currentCostume: 0,
+                currentCostume: 1,
                 costumes: [
                     {
-                        assetId: 'bcf454acf82e4504149f7ffe07081dbc',
+                        assetId: '9b6c3390f330e1b69d5c1f7adc07dc2e',
                         name: translator(messages.costume, {index: 1}),
                         bitmapResolution: 1,
-                        md5ext: 'bcf454acf82e4504149f7ffe07081dbc.svg',
+                        md5ext: '9b6c3390f330e1b69d5c1f7adc07dc2e.svg',
                         dataFormat: 'svg',
-                        rotationCenterX: 48,
-                        rotationCenterY: 50
+                        rotationCenterX: 40.129558755327906,
+                        rotationCenterY: 65.13632263365746
                     },
                     {
-                        assetId: '0fb9be3e8397c983338cb71dc84d0b25',
+                        assetId: 'aad7c957c3563244afe4324d2a9549ed',
                         name: translator(messages.costume, {index: 2}),
                         bitmapResolution: 1,
-                        md5ext: '0fb9be3e8397c983338cb71dc84d0b25.svg',
+                        md5ext: 'aad7c957c3563244afe4324d2a9549ed.svg',
                         dataFormat: 'svg',
-                        rotationCenterX: 46,
-                        rotationCenterY: 53
+                        rotationCenterX: 40.43816149605661,
+                        rotationCenterY: 60.133906949011404
                     }
                 ],
-                sounds: [
-                    {
-                        assetId: '83c36d806dc92327b9e7049a565c6bff',
-                        name: translator(messages.meow),
-                        dataFormat: 'wav',
-                        format: '',
-                        rate: 22050,
-                        sampleCount: 18688,
-                        md5ext: '83c36d806dc92327b9e7049a565c6bff.wav'
-                    }
-                ],
+                sounds: [],
                 volume: 100,
                 visible: true,
-                x: 0,
-                y: 0,
+                x: -83,
+                y: -39,
                 size: 100,
                 direction: 90,
                 draggable: false,
