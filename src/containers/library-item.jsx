@@ -107,7 +107,8 @@ class LibraryItem extends React.PureComponent {
         const iconMd5 = this.curIconMd5();
         const iconURL = iconMd5 ?
             // Query string “icon” is a hack to prevent XHR trying to use cached version and fail for CORS.
-            `http://yubersvc-static-asset.s3-website-ap-northeast-1.amazonaws.com/${iconMd5}?icon` :
+            // `http://yubersvc-static-asset.s3-website-ap-northeast-1.amazonaws.com/${iconMd5}?icon` :
+            `https://yubersvc-static-asset.s3.ap-northeast-1.amazonaws.com/${iconMd5}?icon` :
             this.props.iconRawURL;
         return (
             <LibraryItemComponent
