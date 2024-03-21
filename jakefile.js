@@ -34,9 +34,9 @@ const hasNewerFile = (dirsToCheck, buildDir) => {
 namespace("build", () => {
     desc("Build for development")
     task("development", async () => {
-        const shell = require("shelljs");
-        if (hasNewerFile(["./src"], "build")) {
-            shell.exec("npm run build");
+        const sh = require("shelljs");
+        if (! sh.test("-d", "build") || hasNewerFile(["./src"], "build")) {
+            sh.exec("npm run build");
         }
     });
 
