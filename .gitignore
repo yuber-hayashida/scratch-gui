@@ -24,3 +24,8 @@ npm-*
 # Downloaded during "npm install"
 /static/microbit
 /.idea
+
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
