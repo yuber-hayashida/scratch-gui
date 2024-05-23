@@ -170,7 +170,39 @@ module.exports = [
         optimization: {
             splitChunks: {
                 chunks: 'all',
-                name: 'lib.min'
+                name: 'lib.min',
+                cacheGroups: {
+                    scratchL10n: {
+                        test: /[\\/]node_modules[\\/]scratch-l10n[\\/]/,
+                        name: 'scratch-l10n',
+                        chunks: 'all',
+                        enforce: true
+                    },
+                    scratchBlocks: {
+                        test: /[\\/]node_modules[\\/]scratch-blocks[\\/]/,
+                        name: 'scratch-blocks',
+                        chunks: 'all',
+                        enforce: true
+                    },
+                    scratchVm: {
+                        test: /[\\/]node_modules[\\/]scratch-vm[\\/]/,
+                        name: 'scratch-vm',
+                        chunks: 'all',
+                        enforce: true
+                    },
+                    catBlocks: {
+                        test: /[\\/]node_modules[\\/]cat-blocks[\\/]/,
+                        name: 'cat-blocks',
+                        chunks: 'all',
+                        enforce: true
+                    },
+                    scratchRenderFonts: {
+                        test: /[\\/]node_modules[\\/]scratch-render-fonts[\\/]/,
+                        name: 'scratch-render-fonts',
+                        chunks: 'all',
+                        enforce: true
+                    },
+                },
             },
             runtimeChunk: {
                 name: 'lib.min'
@@ -185,7 +217,7 @@ module.exports = [
                 'process.env.GA_ID': `"${process.env.GA_ID || 'UA-000000-01'}"`
             }),
             new HtmlWebpackPlugin({
-                chunks: ['lib.min', 'gui'],
+                chunks: ['lib.min', 'scratch-l10n', 'scratch-blocks', 'scratch-vm', 'cat-blocks', 'scratch-render-fonts', 'gui'],
                 template: 'src/playground/index.ejs',
                 title: 'Scratch 3.0 GUI'
             }),
