@@ -22,6 +22,7 @@ const searchParams = new URLSearchParams(window.location.search);
 const isPlayerOnly = searchParams.has('isPlayerOnly') && searchParams.get('isPlayerOnly') === 'true';
 const isFullScreen = searchParams.has('isFullScreen') && searchParams.get('isFullScreen') === 'true';
 const projectId = searchParams.has('projectId') ? searchParams.get('projectId') : 100;
+const canSave = searchParams.has('canSave') ? (searchParams.get('canSave') !== 'false') : true;
 const logo = searchParams.has('logo') ? searchParams.get('logo') : null;
 const url = searchParams.has('url') ? searchParams.get('url') : 'https://scratch.mit.edu';
 
@@ -79,7 +80,7 @@ export default appTarget => {
             backpackVisible
             showComingSoon={false}
             backpackHost={backpackHost}
-            canSave
+            canSave={canSave}
             projectId={projectId}
             assetHost={assetHost}
             projectHost={projectHost}
