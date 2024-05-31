@@ -1,7 +1,10 @@
 #!/bin/bash
 set -o nounset -o errexit -o pipefail
 
-NODE_OPTIONS=--openssl-legacy-provider
-export NODE_OPTIONS
+if test $(uname -s) == "Linux"
+then
+  NODE_OPTIONS=--openssl-legacy-provider
+  export NODE_OPTIONS
+fi
 
 exec npm run "$@"
