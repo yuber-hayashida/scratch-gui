@@ -6,6 +6,9 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+const isAnalyze = process.env.ANALYZE === 'true';
 
 // PostCss
 const autoprefixer = require('autoprefixer');
@@ -117,6 +120,13 @@ const base = {
         ]
     },
     plugins: [
+        ...(isAnalyze ? [
+            new BundleAnalyzerPlugin({
+                openAnalyzer: true,
+                // analyzerMode: 'static', // サーバーモードを使わず、静的なレポートを生成
+                // reportFilename: 'bundle-report.html', // レポートの出力先
+            }),
+        ] : []),
         new CopyWebpackPlugin({
             patterns: [
                 {
@@ -172,6 +182,12 @@ module.exports = [
                 chunks: 'all',
                 name: 'lib.min',
                 cacheGroups: {
+                    scratchPaint: {
+                        test: /[\\/]node_modules[\\/]scratch-paint[\\/]/,
+                        name: 'scratch-paint',
+                        chunks: 'all',
+                        enforce: true
+                    },
                     scratchL10n: {
                         test: /[\\/]node_modules[\\/]scratch-l10n[\\/]/,
                         name: 'scratch-l10n',
@@ -217,7 +233,7 @@ module.exports = [
                 'process.env.GA_ID': `"${process.env.GA_ID || 'UA-000000-01'}"`
             }),
             new HtmlWebpackPlugin({
-                chunks: ['lib.min', 'scratch-l10n', 'scratch-blocks', 'scratch-vm', 'cat-blocks', 'scratch-render-fonts', 'gui'],
+                chunks: ['lib.min', 'scratch-paint', 'scratch-l10n', 'scratch-blocks', 'scratch-vm', 'cat-blocks', 'scratch-render-fonts', 'gui'],
                 template: 'src/playground/index.ejs',
                 title: 'Scratch 3.0 GUI'
             }),
