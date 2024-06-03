@@ -1,10 +1,13 @@
 #!/bin/bash
 set -o nounset -o errexit -o pipefail
 
-# if test $(uname -s) == "Linux"
-# then
-  NODE_OPTIONS=--openssl-legacy-provider
-  export NODE_OPTIONS
-# fi
+NODE_OPTIONS=--openssl-legacy-provider
+export NODE_OPTIONS
+
+if ! node --version > /dev/null 2>&1
+then
+  unset NODE_OPTIONS
+fi
 
 exec npm run "$@"
+
