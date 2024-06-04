@@ -8,7 +8,6 @@ import {
     getIsShowingWithoutId
 } from '../reducers/project-state';
 import {setProjectTitle} from '../reducers/project-title';
-import {setProjectProtected} from '../reducers/project-protected';
 
 const messages = defineMessages({
     defaultProjectTitle: {
@@ -26,7 +25,6 @@ const TitledHOC = function (WrappedComponent) {
     class TitledComponent extends React.Component {
         componentDidMount () {
             this.handleReceivedProjectTitle(this.props.projectTitle);
-            this.props.onSetProjectProtected(this.props.projectProtected);
         }
         componentDidUpdate (prevProps) {
             if (this.props.projectTitle !== prevProps.projectTitle) {
@@ -44,9 +42,6 @@ const TitledHOC = function (WrappedComponent) {
                 this.props.reduxProjectTitle !== this.props.projectTitle) {
                 this.props.onUpdateProjectTitle(this.props.reduxProjectTitle);
             }
-            if (this.props.projectProtected !== prevProps.projectProtected) {
-                this.props.onSetProjectProtected(this.props.projectProtected);
-            }
         }
         handleReceivedProjectTitle (requestedTitle) {
             let newTitle = requestedTitle;
@@ -59,8 +54,6 @@ const TitledHOC = function (WrappedComponent) {
         render () {
             const {
                 /* eslint-disable no-unused-vars */
-                onSetProjectProtected,
-                projectProtected,
                 intl,
                 isAnyCreatingNewState,
                 isShowingWithoutId,
@@ -83,8 +76,6 @@ const TitledHOC = function (WrappedComponent) {
     }
 
     TitledComponent.propTypes = {
-        projectProtected: PropTypes.bool,
-        onSetProjectProtected: PropTypes.func,
         intl: intlShape,
         isAnyCreatingNewState: PropTypes.bool,
         isShowingWithoutId: PropTypes.bool,
@@ -95,7 +86,6 @@ const TitledHOC = function (WrappedComponent) {
     };
 
     TitledComponent.defaultProps = {
-        projectProtected: false,
         onUpdateProjectTitle: () => {}
     };
 
@@ -109,7 +99,6 @@ const TitledHOC = function (WrappedComponent) {
     };
 
     const mapDispatchToProps = dispatch => ({
-        onSetProjectProtected: protected1 => dispatch(setProjectProtected(protected1)),
         onChangedProjectTitle: title => dispatch(setProjectTitle(title))
     });
 
