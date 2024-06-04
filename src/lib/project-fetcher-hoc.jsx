@@ -24,6 +24,7 @@ import log from './log';
 import storage from './storage';
 import {setProjectTitle} from '../reducers/project-title';
 import {setProjectProtected} from '../reducers/project-protected';
+import {selectLocale, setLocales} from '../reducers/locales';
 
 /* Higher Order Component to provide behavior for loading projects by id. If
  * there's no id, the default project is loaded.
@@ -86,6 +87,9 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                                 if (assetData.hasOwnProperty('protected')) {
                                     this.props.onSetProjectProtected(assetData.protected);
                                 }
+                                if (assetData.hasOwnProperty('project_locale')) {
+                                    this.props.onSetProjectLocale(assetData.project_locale);
+                                }
                                 projectAsset.data = (new TextEncoder()).encode(assetData.body);
                             }
                         }
@@ -106,6 +110,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                 /* eslint-disable no-unused-vars */
                 onSetProjectTitle,
                 onSetProjectProtected,
+                onSetProjectLocale,
                 assetHost,
                 intl,
                 isLoadingProject: isLoadingProjectProp,
@@ -133,6 +138,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
     ProjectFetcherComponent.propTypes = {
         onSetProjectTitle: PropTypes.func,
         onSetProjectProtected: PropTypes.func,
+        onSetProjectLocale: PropTypes.func,
         assetHost: PropTypes.string,
         canSave: PropTypes.bool,
         intl: intlShape.isRequired,
@@ -169,6 +175,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
     const mapDispatchToProps = dispatch => ({
         onSetProjectTitle: title => dispatch(setProjectTitle(title)),
         onSetProjectProtected: protected1 => dispatch(setProjectProtected(protected1)),
+        onSetProjectLocale: locale => dispatch(selectLocale(locale)),
         onActivateTab: tab => dispatch(activateTab(tab)),
         onError: error => dispatch(projectError(error)),
         onFetchedProjectData: (projectData, loadingState) =>
