@@ -31,7 +31,10 @@ const AppStateHOC = function (WrappedComponent, localesOnly) {
             let enhancer;
 
             let initializedLocales = localesInitialState;
-            const locale = detectLocale(Object.keys(locales));
+            let locale = props.projectLocale;
+            if ((!locale) || locale === '') {
+                locale = detectLocale(Object.keys(locales));
+            }
             if (locale !== 'en') {
                 initializedLocales = initLocale(initializedLocales, locale);
             }
@@ -95,6 +98,7 @@ const AppStateHOC = function (WrappedComponent, localesOnly) {
         }
         render () {
             const {
+                projectLocale, // eslint-disable-line no-unused-vars
                 isFullScreen, // eslint-disable-line no-unused-vars
                 isPlayerOnly, // eslint-disable-line no-unused-vars
                 showTelemetryModal, // eslint-disable-line no-unused-vars
@@ -112,6 +116,7 @@ const AppStateHOC = function (WrappedComponent, localesOnly) {
         }
     }
     AppStateWrapper.propTypes = {
+        projectLocale: PropTypes.string,
         isFullScreen: PropTypes.bool,
         isPlayerOnly: PropTypes.bool,
         isTelemetryEnabled: PropTypes.bool,
