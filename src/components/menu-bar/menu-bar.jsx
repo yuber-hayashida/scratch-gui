@@ -689,8 +689,8 @@ class MenuBar extends React.Component {
                             </MenuBarItemTooltip>
                         ) : [])}
                     </div>
-                    <Divider className={classNames(styles.divider)} />
-                    <div className={styles.fileGroup}>
+                    {/* <Divider className={classNames(styles.divider)} /> */}
+                    {/* <div className={styles.fileGroup}>
                         <div
                             aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}
                             className={classNames(styles.menuBarItem, styles.hoverable)}
@@ -704,7 +704,7 @@ class MenuBar extends React.Component {
                                 <FormattedMessage {...ariaMessages.tutorials} />
                             </span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* show the proper UI in the account menu, given whether the user is
