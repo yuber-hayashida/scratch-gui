@@ -496,11 +496,12 @@ class MenuBar extends React.Component {
                                         </MenuSection>
                                     )}
                                     <MenuSection>
-                                        <MenuItem
+                                        {this.props.projectCanUpload && <MenuItem
                                             onClick={this.props.onStartSelectingFileUpload}
                                         >
                                             {this.props.intl.formatMessage(sharedMessages.loadFromComputerTitle)}
                                         </MenuItem>
+                                        }
                                         {this.props.projectProtected ||
                                         <SB3Downloader>{(className, downloadProjectCallback) => (
                                             <MenuItem

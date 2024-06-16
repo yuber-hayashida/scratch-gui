@@ -174,6 +174,7 @@ class SoundTab extends React.Component {
     render () {
         const {
             dispatchUpdateRestore, // eslint-disable-line no-unused-vars
+            projectCanUpload, // eslint-disable-line no-unused-vars
             intl,
             isRtl,
             vm,
@@ -225,7 +226,8 @@ class SoundTab extends React.Component {
                     title: intl.formatMessage(messages.addSound),
                     img: addSoundFromLibraryIcon,
                     onClick: onNewSoundFromLibraryClick
-                }, {
+                },
+                ...(projectCanUpload ? [{
                     title: intl.formatMessage(messages.fileUploadSound),
                     img: fileUploadIcon,
                     onClick: this.handleFileUploadClick,
@@ -233,7 +235,8 @@ class SoundTab extends React.Component {
                     fileChange: this.handleSoundUpload,
                     fileInput: this.setFileInput,
                     fileMultiple: true
-                }, {
+                }] : []),
+                {
                     title: intl.formatMessage(messages.surpriseSound),
                     img: surpriseIcon,
                     onClick: this.handleSurpriseSound

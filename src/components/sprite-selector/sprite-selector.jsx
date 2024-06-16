@@ -42,6 +42,7 @@ const messages = defineMessages({
 
 const SpriteSelectorComponent = function (props) {
     const {
+        projectCanUploaad,
         editingTarget,
         hoveredTarget,
         intl,
@@ -116,7 +117,7 @@ const SpriteSelectorComponent = function (props) {
                 className={styles.addButton}
                 img={spriteIcon}
                 moreButtons={[
-                    {
+                    ...(projectCanUploaad ? [{
                         title: intl.formatMessage(messages.addSpriteFromFile),
                         img: fileUploadIcon,
                         onClick: onFileUploadClick,
@@ -124,7 +125,7 @@ const SpriteSelectorComponent = function (props) {
                         fileChange: onSpriteUpload,
                         fileInput: spriteFileInput,
                         fileMultiple: true
-                    }, {
+                    }] : []), {
                         title: intl.formatMessage(messages.addSpriteFromSurprise),
                         img: surpriseIcon,
                         onClick: onSurpriseSpriteClick // TODO need real function for this

@@ -244,6 +244,7 @@ class CostumeTab extends React.Component {
     render () {
         const {
             dispatchUpdateRestore, // eslint-disable-line no-unused-vars
+            projectCanUpload, // eslint-disable-line no-unused-vars
             intl,
             isRtl,
             onNewLibraryBackdropClick,
@@ -278,7 +279,7 @@ class CostumeTab extends React.Component {
                         img: addLibraryIcon,
                         onClick: addLibraryFunc
                     },
-                    {
+                    ...(projectCanUpload ? [{
                         title: intl.formatMessage(addFileMessage),
                         img: fileUploadIcon,
                         onClick: this.handleFileUploadClick,
@@ -286,7 +287,7 @@ class CostumeTab extends React.Component {
                         fileChange: this.handleCostumeUpload,
                         fileInput: this.setFileInput,
                         fileMultiple: true
-                    },
+                    }]: []),
                     {
                         title: intl.formatMessage(messages.addSurpriseCostumeMsg),
                         img: surpriseIcon,

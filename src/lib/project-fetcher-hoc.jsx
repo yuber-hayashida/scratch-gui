@@ -24,6 +24,8 @@ import log from './log';
 import storage from './storage';
 import {setProjectTitle} from '../reducers/project-title';
 import {setProjectProtected} from '../reducers/project-protected';
+import {setProjectCanDelete} from '../reducers/project-can-delete';
+import {setProjectCanUpload} from '../reducers/project-can-upload';
 import {selectLocale} from '../reducers/locales';
 import {setTheme} from '../reducers/theme';
 
@@ -88,6 +90,12 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                                 if (assetData.hasOwnProperty('protected')) {
                                     this.props.onSetProjectProtected(assetData.protected);
                                 }
+                                if (assetData.hasOwnProperty('can_delete')) {
+                                    this.props.onSetProjectCanDelete(assetData.can_delete);
+                                }
+                                if (assetData.hasOwnProperty('can_upload')) {
+                                    this.props.onSetProjectCanUpload(assetData.can_upload);
+                                }
                                 if (assetData.hasOwnProperty('project_locale')) {
                                     this.props.onSetProjectLocale(assetData.project_locale);
                                 }
@@ -114,6 +122,8 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                 /* eslint-disable no-unused-vars */
                 onSetProjectTitle,
                 onSetProjectProtected,
+                onSetProjectCanDelete,
+                onSetProjectCanUpload,
                 onSetProjectLocale,
                 onSetProjectTheme,
                 assetHost,
@@ -143,6 +153,8 @@ const ProjectFetcherHOC = function (WrappedComponent) {
     ProjectFetcherComponent.propTypes = {
         onSetProjectTitle: PropTypes.func,
         onSetProjectProtected: PropTypes.func,
+        onSetProjectCanDelete: PropTypes.func,
+        onSetProjectCanUpload: PropTypes.func,
         onSetProjectLocale: PropTypes.func,
         onSetProjectTheme: PropTypes.func,
         assetHost: PropTypes.string,
@@ -181,6 +193,8 @@ const ProjectFetcherHOC = function (WrappedComponent) {
     const mapDispatchToProps = dispatch => ({
         onSetProjectTitle: title => dispatch(setProjectTitle(title)),
         onSetProjectProtected: protected1 => dispatch(setProjectProtected(protected1)),
+        onSetProjectCanDelete: canDelete => dispatch(setProjectCanDelete(canDelete)),
+        onSetProjectCanUpload: canUpload => dispatch(setProjectCanUpload(canUpload)),
         onSetProjectLocale: locale => dispatch(selectLocale(locale)),
         onSetProjectTheme: theme => dispatch(setTheme(theme)),
         onActivateTab: tab => dispatch(activateTab(tab)),

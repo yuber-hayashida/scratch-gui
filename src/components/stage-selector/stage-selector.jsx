@@ -39,6 +39,7 @@ const messages = defineMessages({
 
 const StageSelector = props => {
     const {
+        projectCanUpload,
         backdropCount,
         containerRef,
         dragOver,
@@ -98,7 +99,7 @@ const StageSelector = props => {
                 className={styles.addButton}
                 img={backdropIcon}
                 moreButtons={[
-                    {
+                    ...(projectCanUpload ? [{
                         title: intl.formatMessage(messages.addBackdropFromFile),
                         img: fileUploadIcon,
                         onClick: onBackdropFileUploadClick,
@@ -106,7 +107,7 @@ const StageSelector = props => {
                         fileChange: onBackdropFileUpload,
                         fileInput: fileInputRef,
                         fileMultiple: true
-                    }, {
+                    }] : []), {
                         title: intl.formatMessage(messages.addBackdropFromSurprise),
                         img: surpriseIcon,
                         onClick: onSurpriseBackdropClick

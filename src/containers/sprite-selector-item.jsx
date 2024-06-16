@@ -116,6 +116,7 @@ class SpriteSelectorItem extends React.PureComponent {
         const {
             /* eslint-disable no-unused-vars */
             projectProtected,
+            projectCanDelete,
             asset,
             id,
             index,
@@ -130,7 +131,7 @@ class SpriteSelectorItem extends React.PureComponent {
             /* eslint-enable no-unused-vars */
             ...props
         } = this.props;
-        const onDeleteButtonClickFunc = !projectProtected && onDeleteButtonClick ? this.handleDelete : null;
+        const onDeleteButtonClickFunc = projectCanDelete && onDeleteButtonClick ? this.handleDelete : null;
         const onExportButtonClickFunc = !projectProtected && onExportButtonClick ? this.handleExport : null;
         return (
             <SpriteSelectorItemComponent
@@ -152,6 +153,7 @@ class SpriteSelectorItem extends React.PureComponent {
 
 SpriteSelectorItem.propTypes = {
     projectProtected: PropTypes.bool,
+    projectCanDelete: PropTypes.bool,
     asset: PropTypes.instanceOf(storage.Asset),
     costumeURL: PropTypes.string,
     dispatchSetHoveredSprite: PropTypes.func.isRequired,
@@ -173,6 +175,7 @@ SpriteSelectorItem.propTypes = {
 
 const mapStateToProps = (state, {id}) => ({
     projectProtected: state.scratchGui.projectProtected,
+    projectCanDelete: state.scratchGui.projectCanDelete,
     dragging: state.scratchGui.assetDrag.dragging,
     receivedBlocks: state.scratchGui.hoveredTarget.receivedBlocks &&
             state.scratchGui.hoveredTarget.sprite === id,
