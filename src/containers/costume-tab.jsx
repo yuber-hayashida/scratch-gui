@@ -328,6 +328,7 @@ class CostumeTab extends React.Component {
 
 CostumeTab.propTypes = {
     dispatchUpdateRestore: PropTypes.func,
+    projectCanUpload: PropTypes.bool,
     editingTarget: PropTypes.string,
     intl: intlShape,
     isRtl: PropTypes.bool,
@@ -354,6 +355,7 @@ CostumeTab.propTypes = {
 };
 
 const mapStateToProps = state => ({
+    projectCanUpload: state.scratchGui.projectCanUpload,
     editingTarget: state.scratchGui.targets.editingTarget,
     isRtl: state.locales.isRtl,
     sprites: state.scratchGui.targets.sprites,

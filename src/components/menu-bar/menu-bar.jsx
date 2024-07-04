@@ -846,6 +846,7 @@ class MenuBar extends React.Component {
 
 MenuBar.propTypes = {
     projectProtected: PropTypes.bool,
+    projectCanUpload: PropTypes.bool,
     aboutMenuOpen: PropTypes.bool,
     accountMenuOpen: PropTypes.bool,
     authorId: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
@@ -940,6 +941,7 @@ const mapStateToProps = (state, ownProps) => {
     const user = state.session && state.session.session && state.session.session.user;
     return {
         projectProtected: state.scratchGui.projectProtected,
+        projectCanUpload: state.scratchGui.projectCanUpload,
         aboutMenuOpen: aboutMenuOpen(state),
         accountMenuOpen: accountMenuOpen(state),
         currentLocale: state.locales.locale,

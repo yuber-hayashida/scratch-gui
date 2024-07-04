@@ -14,6 +14,8 @@ import paintIcon from '../action-menu/icon--paint.svg';
 import surpriseIcon from '../action-menu/icon--surprise.svg';
 import searchIcon from '../action-menu/icon--search.svg';
 
+import {connect} from 'react-redux';
+
 const messages = defineMessages({
     addBackdropFromLibrary: {
         id: 'gui.spriteSelector.addBackdropFromLibrary',
@@ -131,6 +133,7 @@ const StageSelector = props => {
 };
 
 StageSelector.propTypes = {
+    projectCanUpload: PropTypes.bool,
     backdropCount: PropTypes.number.isRequired,
     containerRef: PropTypes.func,
     dragOver: PropTypes.bool,
@@ -150,4 +153,13 @@ StageSelector.propTypes = {
     url: PropTypes.string
 };
 
-export default injectIntl(StageSelector);
+const mapStateToProps = state => ({
+    projectCanUpload: state.scratchGui.projectCanUpload,
+})
+
+const mapDispatchToProps = dispatch => ({})
+
+export default injectIntl(connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(StageSelector));

@@ -308,6 +308,7 @@ SoundTab.propTypes = {
 };
 
 const mapStateToProps = state => ({
+    projectCanUpload: state.scratchGui.projectCanUpload,
     editingTarget: state.scratchGui.targets.editingTarget,
     isRtl: state.locales.isRtl,
     sprites: state.scratchGui.targets.sprites,

@@ -17,6 +17,8 @@ import spriteIcon from '../action-menu/icon--sprite.svg';
 import surpriseIcon from '../action-menu/icon--surprise.svg';
 import searchIcon from '../action-menu/icon--search.svg';
 
+import {connect} from 'react-redux';
+
 const messages = defineMessages({
     addSpriteFromLibrary: {
         id: 'gui.spriteSelector.addSpriteFromLibrary',
@@ -42,7 +44,7 @@ const messages = defineMessages({
 
 const SpriteSelectorComponent = function (props) {
     const {
-        projectCanUploaad,
+        projectCanUpload,
         editingTarget,
         hoveredTarget,
         intl,
@@ -117,7 +119,7 @@ const SpriteSelectorComponent = function (props) {
                 className={styles.addButton}
                 img={spriteIcon}
                 moreButtons={[
-                    ...(projectCanUploaad ? [{
+                    ...(projectCanUpload ? [{
                         title: intl.formatMessage(messages.addSpriteFromFile),
                         img: fileUploadIcon,
                         onClick: onFileUploadClick,
@@ -190,4 +192,10 @@ SpriteSelectorComponent.propTypes = {
     stageSize: PropTypes.oneOf(Object.keys(STAGE_DISPLAY_SIZES)).isRequired
 };
 
-export default injectIntl(SpriteSelectorComponent);
+const mapStateToProps = state => ({
+    projectCanUpload: state.scratchGui.projectCanUpload,
+})
+
+const mapDispatchToProps = dispatch => ({})
+
+export default injectIntl(connect(mapStateToProps, mapDispatchToProps)(SpriteSelectorComponent));
