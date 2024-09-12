@@ -110,6 +110,8 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
+    "cross-spawn": "^7.0.3",
+    "@types/cross-spawn": "^6.0.6",
     "@babel/cli": "7.14.8",
     "@babel/core": "7.14.8",
     "@babel/plugin-proposal-object-rest-spread": "7.14.7",

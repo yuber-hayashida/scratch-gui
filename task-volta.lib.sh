@@ -1,8 +1,8 @@
 #!/bin/sh
 set -o nounset -o errexit
 
-NODE_OPTIONS=--openssl-legacy-provider
-export NODE_OPTIONS
+# NODE_OPTIONS=--openssl-legacy-provider
+# export NODE_OPTIONS
 
 # Releases · volta-cli/volta https://github.com/volta-cli/volta/releases
 cmd_base=volta
@@ -150,11 +150,6 @@ subcmd_npm() { # Run npm.
   exec "$volta_cmd_path" run npm -- "$@"
 }
 
-subcmd_run() { # Run JS script.
-  original_wokrking_dir_path="$PWD"
-  echo "$0", "$1"
-  cd "$(dirname "$0")"
-  echo d: "$(dirname "$0")"
-  # node_volta_cmd_path=$("$volta_cmd_path" which node)
-  # exec "$node_volta_cmd_path" lib/run-node.mjs "$original_wokrking_dir_path" "$@"
+delegate_tasks() {
+  exec "$volta_cmd_path" run npm -- run "$@"
 }
