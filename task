@@ -1,13 +1,22 @@
-#!/bin/bash
-set -o nounset -o errexit -o pipefail
+#!/bin/sh
+set -o nounset -o errexit
 
-NODE_OPTIONS=--openssl-legacy-provider
-export NODE_OPTIONS
-
-if ! node --version > /dev/null 2>&1
+if test "${1+SET}" = SET && test "$1" = "update-me"
 then
-  unset NODE_OPTIONS
+  temp_dir_path="$(mktemp -d)"
+  # shellcheck disable=SC2064
+  trap "rm -fr \"$temp_dir_path\"" EXIT
+  curl --fail --location --output "$temp_dir_path"/task https://raw.githubusercontent.com/knaka/src/main/task
+  cat "$temp_dir_path"/task > "$0"
+  exit 0
 fi
-
-exec npm run "$@"
-
+script_dir_path=$(dirname "$0")
+script_name=$(basename "$0")
+sh_dir_path="$script_dir_path"
+env_file_path="$script_dir_path"/.env.sh
+if test -r "$env_file_path"
+then
+  # shellcheck disable=SC1090
+  . "$env_file_path"
+fi
+exec sh "$sh_dir_path/$script_name.sh" "$@"
