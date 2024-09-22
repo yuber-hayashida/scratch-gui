@@ -110,6 +110,7 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
+    "dotenv": "^16.4.5",
     "cross-spawn": "^7.0.3",
     "@types/cross-spawn": "^6.0.6",
     "@babel/cli": "7.14.8",
