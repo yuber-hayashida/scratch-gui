@@ -40,7 +40,7 @@ volta_cmd() {
   if ! test -x "$volta_cmd_path"
   then
     url=https://github.com/volta-cli/volta/releases/download/v${ver}/volta-${ver}-${os_arch}${arc_ext}
-    curl$exe_ext --fail --location "$url" -o - | (cd "$volta_dir_path"; tar$exe_ext -xf -)
+    curl$exe_ext --fail --location "$url" -o - | (cd "$volta_dir_path"; tar$exe_ext -zxf -)
     chmod +x "$volta_dir_path"/*
   fi
   PATH="$volta_dir_path:$PATH" "$cmd_base" "$@" || return $?
