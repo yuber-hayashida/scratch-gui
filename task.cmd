@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
-if "%1" == "update-me" (
-  curl.exe --fail --location --output %TEMP%\task_cmd-%~nx0 https://raw.githubusercontent.com/knaka/src/main/task.cmd || exit /b %ERRORLEVEL%
+if "%~1" == "update-me" (
+  curl.exe --fail --location --output %TEMP%\task_cmd-%~nx0 https://raw.githubusercontent.com/knaka/src/main/task.cmd || exit /b !ERRORLEVEL!
   move /y %TEMP%\task_cmd-%~nx0 %~f0
   exit /b 0
 )
@@ -25,9 +25,11 @@ if not exist !bin_dir_path! (
 )
 set cmd_path=!bin_dir_path!\!cmd_name!
 if not exist !cmd_path! (
-  curl.exe --fail --location --output "!cmd_path!" https://frippery.org/files/busybox/!cmd_name! || exit /b %ERRORLEVEL%
+  curl.exe --fail --location --output "!cmd_path!" https://frippery.org/files/busybox/!cmd_name! || exit /b !ERRORLEVEL!
 )
 
+set "ARG0=%~f0"
+set "ARG0BASE=%~n0"
 set script_dir_path=%~dp0
 set script_name=%~n0
 set sh_dir_path=!script_dir_path!
@@ -35,5 +37,6 @@ set env_file_path=!script_dir_path!\.env.sh.cmd
 if exist !env_file_path! (
   call !env_file_path!
 )
-!cmd_path! sh !sh_dir_path!\!script_name!.sh %* || exit /b %ERRORLEVEL%
+set BB_GLOBBING=0
+!cmd_path! sh !sh_dir_path!\!script_name!.sh %* || exit /b !ERRORLEVEL!
 endlocal
