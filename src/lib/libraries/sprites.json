@@ -10,19 +10,19 @@
         "currentCostume": 1,
         "costumes": [
             {
-                "assetId": "a3e2b3f8a4c0c534cf1fd9d1aa5a3d96",
+                "assetId": "480c838741a4e719f242d75d941c9ae6",
                 "name": "うさぎあるく1",
                 "bitmapResolution": 1,
-                "md5ext": "a3e2b3f8a4c0c534cf1fd9d1aa5a3d96.svg",
+                "md5ext": "480c838741a4e719f242d75d941c9ae6.svg",
                 "dataFormat": "svg",
                 "rotationCenterX": 40.129558755327906,
                 "rotationCenterY": 65.13632263365746
             },
             {
-                "assetId": "d5b14555dd52520b0fa017aa314bc8ff",
+                "assetId": "45a938e9253717020cc967f619272fd3",
                 "name": "うさぎあるく2",
                 "bitmapResolution": 1,
-                "md5ext": "d5b14555dd52520b0fa017aa314bc8ff.svg",
+                "md5ext": "45a938e9253717020cc967f619272fd3.svg",
                 "dataFormat": "svg",
                 "rotationCenterX": 40.43816149605661,
                 "rotationCenterY": 60.133906949011404
