@@ -72,19 +72,19 @@
         "rotationCenterY": 64.58333333333329
       },
       {
-        "assetId": "b90768e6e91dcd989ba8eb64bb0c3148",
+        "assetId": "480c838741a4e719f242d75d941c9ae6",
         "name": "うさぎあるく1",
         "bitmapResolution": 1,
-        "md5ext": "b90768e6e91dcd989ba8eb64bb0c3148.svg",
+        "md5ext": "480c838741a4e719f242d75d941c9ae6.svg",
         "dataFormat": "svg",
         "rotationCenterX": 40.129558755327906,
         "rotationCenterY": 65.13632263365746
       },
       {
-        "assetId": "1eee4d4f7cb4dc417fb4a79752212f41",
+        "assetId": "45a938e9253717020cc967f619272fd3",
         "name": "うさぎあるく2",
         "bitmapResolution": 1,
-        "md5ext": "1eee4d4f7cb4dc417fb4a79752212f41.svg",
+        "md5ext": "45a938e9253717020cc967f619272fd3.svg",
         "dataFormat": "svg",
         "rotationCenterX": 40.43816149605661,
         "rotationCenterY": 60.133906949011404
@@ -106,7 +106,7 @@
         "dataFormat": "svg",
         "rotationCenterX": 41.28886707950883,
         "rotationCenterY": 58.34406671325458
-      },  
+      },
       {
         "assetId": "ad7d9bbded0f1c9c5811ccfdc5a9d470",
         "name": "おばけ",
@@ -142,7 +142,7 @@
         "dataFormat": "svg",
         "rotationCenterX": 93.20979443772677,
         "rotationCenterY": 60.573155985489734
-      },  
+      },
       {
         "assetId": "cd6681394077332e7245321846981650",
         "name": "きうさあるく1",
