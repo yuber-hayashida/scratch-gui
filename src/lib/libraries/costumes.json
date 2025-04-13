@@ -90,6 +90,15 @@
         "rotationCenterY": 60.133906949011404
       },
       {
+        "assetId": "c79dede649a4f714aef5c525e86ead9f",
+        "name": "うさぎとぶ",
+        "bitmapResolution": 1,
+        "md5ext": "c79dede649a4f714aef5c525e86ead9f.svg",
+        "dataFormat": "svg",
+        "rotationCenterX": 47.11315192743754,
+        "rotationCenterY": 47.32779043280186
+    },
+      {
         "assetId": "46a63a0bbe78502e22f83767bd59d0ee",
         "name": "うさぎせいかい",
         "bitmapResolution": 1,
