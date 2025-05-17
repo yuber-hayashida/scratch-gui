@@ -128,7 +128,9 @@ const alerts = [
         alertId: 'savingError',
         clearList: ['createSuccess', 'creating', 'createCopySuccess', 'creatingCopy',
             'createRemixSuccess', 'creatingRemix', 'saveSuccess', 'saving'],
-        showDownload: true,
+        //hayashida
+        //showDownload: true,
+        showDownload: false,
         showSaveNow: true,
         closeButton: false,
         content: (
