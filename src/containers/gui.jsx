@@ -63,6 +63,10 @@ class GUI extends React.Component {
                 `Error in Scratch GUI [location=${window.location}]: ${this.props.error}`);
         }
         const {
+            projectCanDelete,
+            projectCanUpload,
+            projectProtected,
+            projectToken,
             /* eslint-disable no-unused-vars */
             assetHost,
             cloudHost,
