@@ -23,7 +23,22 @@ const isPlayerOnly = searchParams.has('isPlayerOnly') && searchParams.get('isPla
 const isFullScreen = searchParams.has('isFullScreen') && searchParams.get('isFullScreen') === 'true';
 const projectId = searchParams.has('projectId') ? searchParams.get('projectId') : 100;
 const projectToken = searchParams.has('projectToken') ? searchParams.get('projectToken') : '';
+
 const canSave = searchParams.has('canSave') ? (searchParams.get('canSave') !== 'false') : true;
+
+//const projectCanDelete = searchParams.has('projectCanDelete') && searchParams.get('projectCanDelete') === 'true';
+const projectCanDelete = searchParams.has('projectCanDelete') ? (searchParams.get('projectCanDelete') === 'true') : undefined;
+
+//const projectCanUpload = searchParams.has('projectCanUpload') ? (searchParams.get('projectCanUpload') !== 'false') : true;
+//const projectCanUpload = searchParams.has('projectCanUpload') && searchParams.get('projectCanUpload') === 'true';
+//const projectCanUpload = searchParams.has('projectCanUpload') && searchParams.get('projectCanUpload') === 'true';
+const projectCanUpload = searchParams.has('projectCanUpload') ? (searchParams.get('projectCanUpload') === 'true') : undefined;
+
+//const projectProtected = searchParams.has('projectProtected') && searchParams.get('projectProtected') === 'true';
+//const projectProtected = searchParams.has('projectProtected') ? (searchParams.get('projectProtected') !== 'false') : true;
+const projectProtected = searchParams.has('projectProtected') ? (searchParams.get('projectProtected') === 'true') : undefined;
+
+
 const logo = searchParams.has('logo') ? searchParams.get('logo') : null;
 const url = searchParams.has('url') ? searchParams.get('url') : 'https://scratch.mit.edu';
 
@@ -82,6 +97,9 @@ export default appTarget => {
             showComingSoon={false}
             backpackHost={backpackHost}
             canSave={canSave}
+            projectCanDelete={projectCanDelete}
+            projectCanUpload={projectCanUpload}
+            projectProtected={projectProtected}
             projectId={projectId}
             projectToken={projectToken}
             assetHost={assetHost}

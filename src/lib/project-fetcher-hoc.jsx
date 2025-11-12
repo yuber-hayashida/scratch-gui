@@ -57,7 +57,36 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                 this.props.setProjectId(props.projectId.toString());
             }
         }
+
+        componentDidMount () {
+
+            if (typeof this.props.projectCanDelete === 'boolean') {
+                this.props.onSetProjectCanDelete(this.props.projectCanDelete);
+            }
+            if (typeof this.props.projectCanUpload === 'boolean') {
+                this.props.onSetProjectCanUpload(this.props.projectCanUpload);
+            }
+            if (typeof this.props.projectProtected === 'boolean') {
+                this.props.onSetProjectProtected(this.props.projectProtected);
+            }
+
+        }
+
         componentDidUpdate (prevProps) {
+
+            if (prevProps.projectCanDelete !== this.props.projectCanDelete &&
+                typeof this.props.projectCanDelete === 'boolean') {
+                this.props.onSetProjectCanDelete(this.props.projectCanDelete);
+            }
+            if (prevProps.projectCanUpload !== this.props.projectCanUpload &&
+                typeof this.props.projectCanUpload === 'boolean') {
+                this.props.onSetProjectCanUpload(this.props.projectCanUpload);
+            }
+            if (prevProps.projectProtected !== this.props.projectProtected &&
+                typeof this.props.projectProtected === 'boolean') {
+                this.props.onSetProjectProtected(this.props.projectProtected);
+            }
+
             if (prevProps.projectHost !== this.props.projectHost) {
                 storage.setProjectHost(this.props.projectHost);
             }
@@ -87,13 +116,16 @@ const ProjectFetcherHOC = function (WrappedComponent) {
                             const assetData = JSON.parse((new TextDecoder()).decode(projectAsset.data));
                             if (assetData.hasOwnProperty('title')) {
                                 this.props.onSetProjectTitle(assetData.title);
-                                if (assetData.hasOwnProperty('protected')) {
+                                //if (assetData.hasOwnProperty('protected')) {
+                                if (assetData.hasOwnProperty('protected') && typeof this.props.projectProtected !== 'boolean') {
                                     this.props.onSetProjectProtected(assetData.protected);
                                 }
-                                if (assetData.hasOwnProperty('can_delete')) {
+                                //if (assetData.hasOwnProperty('can_delete')) {
+                                if (assetData.hasOwnProperty('can_delete') && typeof this.props.projectCanDelete !== 'boolean') {
                                     this.props.onSetProjectCanDelete(assetData.can_delete);
                                 }
-                                if (assetData.hasOwnProperty('can_upload')) {
+                                //if (assetData.hasOwnProperty('can_upload')) {
+                                if (assetData.hasOwnProperty('can_upload') && typeof this.props.projectCanUpload !== 'boolean') {
                                     this.props.onSetProjectCanUpload(assetData.can_upload);
                                 }
                                 if (assetData.hasOwnProperty('project_locale')) {
@@ -159,6 +191,7 @@ const ProjectFetcherHOC = function (WrappedComponent) {
         onSetProjectTheme: PropTypes.func,
         assetHost: PropTypes.string,
         canSave: PropTypes.bool,
+        projectCanUpload: PropTypes.bool,
         intl: intlShape.isRequired,
         isCreatingNew: PropTypes.bool,
         isFetchingWithId: PropTypes.bool,
